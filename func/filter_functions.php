@@ -20,14 +20,14 @@ function getData($sql){
 function getMonthData($sql){
     include('../db/connect.php');
     $result = mysqli_query($conn,$sql); 
+    // print_r($result);
     $outputMonth = '';
     if (mysqli_num_rows($result) > 0) {
         while($row = mysqli_fetch_assoc($result)) {
-            // print_r($row);
             $dateString = array($row['date']);
             // print_r($dateString);
-            foreach($dateString as $day_item){
-                // print_r($day_item);
+            foreach(array_unique($dateString) as $day_item){
+                print_r($day_item);
                 $day = strtotime($day_item);
                 $day_v = date('F Y', $day);
                 $outputMonth .='<option selected value='.$day_item.'>'. $day_v .'</option>';
