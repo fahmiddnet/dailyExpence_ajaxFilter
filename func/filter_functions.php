@@ -24,10 +24,10 @@ function getMonthData($sql){
     $outputMonth = '';
     if (mysqli_num_rows($result) > 0) {
         while($row = mysqli_fetch_assoc($result)) {
-            $dateString = array($row['date']);
+            $dateString = array($row['MY_time']);
             // print_r($dateString);
             foreach(array_unique($dateString) as $day_item){
-                print_r($day_item);
+                // print_r($day_item);
                 $day = strtotime($day_item);
                 $day_v = date('F Y', $day);
                 $outputMonth .='<option selected value='.$day_item.'>'. $day_v .'</option>';
@@ -45,12 +45,12 @@ function getYearData($sql){
     if (mysqli_num_rows($result) > 0) {
         while($row = mysqli_fetch_assoc($result)) {
             // print_r($row);
-            $dateString = array($row['date']);
+            $dateString = array($row['MY_time']);
             // print_r($dateString);
             foreach($dateString as $day_item){
                 // $valueItem = $day_item;
-                $selected_year = date('Y', strtotime($day_item));
-                $outputYear .='<option selected value='.$day_item.'>'. $selected_year .'</option>';
+                // $selected_year = date('Y', strtotime($day_item));
+                $outputYear .='<option selected value='.$day_item.'>'. $day_item .'</option>';
             };
         }
         print_r($selected_year);

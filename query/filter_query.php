@@ -10,11 +10,11 @@ if(isset($_POST['action'])){
         getData($sql);
     }
     if($_POST['action'] == 'fetchMonthData'){
-        $sql = "SELECT DISTINCT date FROM expenses WHERE user_id = '$user_info'";
+        $sql = "SELECT DISTINCT Date_format(date, '%Y-%m') as MY_time FROM expenses WHERE user_id = '$user_info'";
         getMonthData($sql);
     }
     if($_POST['action'] == 'fetchYearData'){
-        $sql = "SELECT DISTINCT date FROM expenses WHERE user_id = '$user_info'";
+        $sql = "SELECT DISTINCT Date_format(date, '%Y') as MY_time FROM expenses WHERE user_id = '$user_info'";
         getYearData($sql);
     }
 

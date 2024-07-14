@@ -23,8 +23,7 @@
 
     if(isset($_POST['taskOption_year'])){
         $taskOption_year_item = $_POST['taskOption_year'];
-        $selected_Only_year = date('Y', strtotime($taskOption_year_item));
-        $filter_year = "SELECT catagory, SUM(amount) AS total_price FROM expenses WHERE YEAR(date) = '$selected_Only_year' AND user_id = '$user_info' GROUP BY catagory";
+        $filter_year = "SELECT catagory, SUM(amount) AS total_price FROM expenses WHERE YEAR(date) = '$taskOption_year_item' AND user_id = '$user_info' GROUP BY catagory";
         highchart_year_Data($filter_year);
     };
 
