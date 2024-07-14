@@ -43,7 +43,7 @@
       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-primary" type="submit">Search</button>
     </form>
-    <div class="logout mx-2">
+    <div class="logout mx-2 mt-2">
       <a class="btn btn-danger" href="logout.php">Logout</a>
     </div>
   </div>

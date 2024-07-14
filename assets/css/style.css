@@ -7,6 +7,24 @@ body{
     background-color: rgb(210, 211, 212);
 }
 
+/* info page  */
+.welcomebox{
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    background-color: #0e1c36;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+}
+.text-title{
+    font-size: 24px;
+    font-weight: 700;
+    color: #555;
+}
+.text-small-bold{
+    font-weight: bold;
+}
+
 /* Nav bar  */
 .nav-link{
     color: #fff;

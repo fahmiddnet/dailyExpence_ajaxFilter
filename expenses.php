@@ -38,25 +38,25 @@ include('db/connect.php');
                     </div>
                     <div class="expense-item" id="expense_box_item">
                         <div class="btn-add_new d-flex justify-content-end">
-                            <a class="btn btn-dark mb-4" id="add_new_item">add new</a>
+                            <a class="btn btn-dark rounded-0 mb-4" id="add_new_item">add new</a>
                         </div>
                         <div class="row">
                             <div class="col-md-3">
                                 <div class="mb-3">
                                     <label class="form-label">Title</label>
-                                    <input type="text" name="item_title[]" class="form-control" required>
+                                    <input type="text" name="item_title[]" class="form-control rounded-0" required>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="input-field">
                                     <label class="form-label">Amount</label>
-                                    <input type="number" name="item_amount[]" class="form-control" required>
+                                    <input type="number" name="item_amount[]" class="form-control rounded-0" required>
                                 </div>
                             </div>
                             <div class="col-md-2">
                                 <div class="input-field">
                                     <label class="form-label">Catagory</label><br>
-                                    <select class="form-select" name="item_catagory[]"  aria-label="Default select example" required>
+                                    <select class="form-select rounded-0" name="item_catagory[]"  aria-label="Default select example" required>
                                         <option disabled selected value>Catagory</option>
                                         <?php foreach($show_all_catagory as $item_catagory): ?>
                                         <option value="<?php echo $item_catagory['catagory_name'] ?>"><?php echo $item_catagory['catagory_name'] ?></option>
@@ -67,18 +67,18 @@ include('db/connect.php');
                             <div class="col-md-3">
                                 <div class="input-field">
                                     <label class="form-label">Note</label>
-                                    <input type="text" name="item_note[]" class="form-control">
+                                    <input type="text" name="item_note[]" class="form-control rounded-0">
                                 </div>
                             </div>
                             <div class="col-md-1">
                                 <div class="input-field">
                                     <label class="form-label">Opt</label><br>
-                                    <a class="btn btn-danger disabled">x</a>
+                                    <a class="btn btn-danger  rounded-0 disabled">x</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <button type="submit" name="submit_exp_value" class="btn btn-primary mb-5" id="add_btn">Submit</button>
+                    <button type="submit" name="submit_exp_value" class="btn btn-lg btn-primary rounded-0 mb-5" id="add_btn">Submit</button>
                 </form>
             </div>
         </div>
@@ -121,19 +121,19 @@ include('db/connect.php');
                             <div class="col-md-3">
                                 <div class="mb-3">
                                     <label class="form-label">Title</label>
-                                    <input type="text" name="item_title[]" class="form-control">
+                                    <input type="text" name="item_title[]" class="form-control rounded-0">
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="input-field">
                                     <label class="form-label">Amount</label>
-                                    <input type="number" name="item_amount[]" class="form-control">
+                                    <input type="number" name="item_amount[]" class="form-control rounded-0">
                                 </div>
                             </div>
                             <div class="col-md-2">
                                 <div class="input-field">
                                    <label class="form-label">Catagory</label><br>
-                                    <select class="form-select" name="item_catagory[]" aria-label="Default select example">
+                                    <select class="form-select rounded-0" name="item_catagory[]" aria-label="Default select example">
                                         <option selected>Catagory</option>
                                         <?php foreach($show_all_catagory as $item_catagory): ?>
                                         <option value="<?php echo $item_catagory['catagory_name'] ?>"><?php echo $item_catagory['catagory_name'] ?></option>
@@ -144,13 +144,13 @@ include('db/connect.php');
                             <div class="col-md-3">
                                 <div class="input-field">
                                     <label class="form-label">Note</label>
-                                    <input type="text" name="item_note[]" class="form-control">
+                                    <input type="text" name="item_note[]" class="form-control rounded-0">
                                 </div>
                             </div>
                             <div class="col-md-1">
                             <div class="input-field">
                                     <label class="form-label">Opt</label><br>
-                                    <a class="btn btn-danger remove_btn">x</a>
+                                    <a class="btn btn-danger  rounded-0 remove_btn">x</a>
                                 </div>
                             </div>
                         </div>
